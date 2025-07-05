@@ -1,0 +1,67 @@
+.projects-wrapper {
+  background-color: transparent;
+  padding: 70px 0px 80px 0px;
+  transition: all 0.3s ease, height 0ms;
+  box-sizing: border-box;
+  margin-top: -100px;
+
+}
+.projects-container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+.projects-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.project-row { display: flex; }
+.project-row-2 { margin-top: 30px; }
+.project { border-radius: 10px; overflow: hidden; background-color: white; padding-bottom: 30px; transition: all 0.3s ease; }
+.project:hover { box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.4); }
+.project-1, .project-3 { margin-right: 30px; }
+.project-1 { width: 60%; }
+.project-2 { width: 40%; }
+.project-3 { width: 40%; }
+.project-4 { width: 60%; }
+.project-image { background-size: cover; background-position: center; height: 300px; }
+.project-1-image { background-image: url(../images/project-1-image.jpg); }
+.project-2-image { background-image: url(../images/project-2-image.jpg); }
+.project-3-image { background-image: url(../images/project-3-image.jpg); }
+.project-4-image { background-image: url(../images/project-4-image.jpg); }
+.project-text-container { padding: 35px; height: 240px; position: relative; }
+.project-title-container { display: flex; }
+.project-title { margin-bottom: 30px; width: 60%; font-size: 1.4em; }
+.project-description-container { overflow: hidden; }
+.project-description { opacity: 1; line-height: 1.7em !important; height: 120px; color: rgb(96, 96, 96)}
+.fa-external-link-alt, .fa-code { font-size: 1.2em; margin-left: 20px; }
+.project-stack-container { position: absolute; bottom: 0; }
+.project-stack li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-family: "Sailec-Bold", sans-serif;
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-right: 0px;
+  font-size: 0.7em;
+  color: white;
+  background-color: #202020;
+}
+.project-links { width: 40%; }
+.project-link { float: right; }
+.github-container {
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.project-link i {
+  font-size: 1.2em;
+  color: #888;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-link i:hover {
+  color: #6c63ff;
+  transform: scale(1.25) rotate(-10deg);
+}

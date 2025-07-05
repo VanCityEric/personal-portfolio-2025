@@ -1,0 +1,66 @@
+@import url("base.css");
+@import url("typography.css");
+@import url("utilities.css");
+@import url("nav.css");
+@import url("landing.css");
+@import url("about.css");
+@import url("experience.css");
+@import url("projects.css");
+@import url("contact.css");
+@import url("footer.css");
+@import url("dark.css");
+
+* {
+    font-family: "Sailec-Regular", sans-serif;
+}
+
+html, body {
+  max-width: 100%!important;
+  overflow-x: hidden;
+}
+
+.fa-white {
+  color: white!important;
+}
+
+.button-style,
+.menu-button,
+.contact-button {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.button-style {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none !important;
+  font-size: 0.9em;
+  background: linear-gradient(140deg, hsla(280, 84%, 41%, 1), hsla(218, 97%, 56%, 1));
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    140deg,
+    hsla(280, 84%, 41%, 1) 0%,
+    hsla(218, 97%, 56%, 1) 100%
+  );
+  background-size: 200%;
+  background-position: left;
+  color: white;
+  font-size: 0.9em;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  transition: 
+    transform 0.3s ease,
+    background-position 0.5s ease,
+    box-shadow 0.3s ease;
+}
+
+.button-style:hover {
+  transform: translateY(-4px);
+  background-position: right;
+  cursor: pointer;
+}

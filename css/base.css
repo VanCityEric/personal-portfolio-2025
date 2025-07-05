@@ -1,0 +1,20 @@
+@import url("//hello.myfonts.net/count/3fcdb2");
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #202020;
+  letter-spacing: 0.2px;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden!important;
+  background: #fbfcfc;
+  transition: all 0.3s ease, height 0ms;
+}
+
+a {
+  text-decoration: none;
+}

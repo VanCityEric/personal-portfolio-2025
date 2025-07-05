@@ -1,0 +1,65 @@
+.contact-wrapper {
+  width: 100%;
+  transition: all 0.3s ease, height 0ms;
+  box-sizing: border-box;
+  padding: 70px 0px 120px 0px;
+  overflow-y: hidden;
+  margin-top: -50px;
+}
+.contact-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  display: flex;
+}
+.contact-text-section { width: 50%; margin-right: 20px; }
+.contact-form-section {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.contact-text-header { margin-bottom: 20px; font-size: 2.5em; line-height: 1.2em; }
+.contact-text-p { font-size: 1.2em; }
+input, textarea {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+}
+textarea {
+  resize: none;
+  padding: 20px 10px;
+  font-family: "Sailec-Regular";
+  border-bottom: 1px solid #e8e3df;
+}
+.name { padding: 0px 10px 20px 10px; }
+.email { padding: 20px 10px 20px 10px; }
+.form-button { width: 100%; text-align: right; }
+.submit-button { margin-top: 20px; }
+
+/* File: footer.css */
+.footer-wrapper { width: 100%; box-sizing: border-box; }
+.footer-container { margin: 0 auto; width: 85vw; display: flex; padding: 0px 0px 30px 0px; }
+.footer-col { width: 33.3%; text-align: center; }
+.footer-col h3 { font-weight: 100; font-size: 1em; }
+.back-to-top { transition: all 0.3s ease; }
+.back-to-top:hover { cursor: pointer; color: hsla(218, 97%, 56%, 1) !important; }
+.col-1 { text-align: left; }
+.col-3 { text-align: right; }
+.contact-text-section .fa-github, 
+.contact-text-section .fa-linkedin-in {
+  font-size: 1.5em;
+  padding: 0px 10px;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  color: #444;
+}
+
+.contact-text-section .fa-github:hover, 
+.contact-text-section .fa-linkedin-in:hover {
+  transform: scale(1.25) translateY(-3px);
+  color: #6c63ff;
+  text-shadow: 0 0 8px rgba(34, 114, 252, 0.5);
+  cursor: pointer;
+}

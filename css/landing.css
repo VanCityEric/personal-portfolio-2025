@@ -1,0 +1,62 @@
+.landing-wrapper {
+  overflow: hidden;
+  transition: all 0.3s ease, height 0ms;
+  box-sizing: border-box;
+  padding: 120px 0px;
+  overflow-y: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-container {
+  margin: 0 auto;
+  height: 100%;
+
+}
+.landing-text {
+  width: 60%;
+  float: left;
+  padding-top: 60px;
+}
+
+.landing-p { margin-top: 20px; font-size: 1.4em; font-weight: 100 !important;   color: #333; }
+
+.landing-image {
+  float: right;
+  width: 40%;
+  height: 390px;
+  position: relative;
+  top: 100px;
+  right: 120px;
+}
+
+.landing-image img { height: 110%; width: 150%; }
+
+.landing-button {
+  display: inline-block;
+  margin-top: 50px; /* adjust as needed */
+}
+
+.landing-header {
+  min-height: 1.5em; /* Ensure full height is preserved */
+  position: relative;
+  font-size: 3.2em; 
+  font-weight: 500; 
+}
+
+.landing-p {
+  position: relative;
+}
+
+#greeting-text::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+  margin-left: 4px;
+  color: #6c63ff;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

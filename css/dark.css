@@ -1,0 +1,118 @@
+body.dark-mode {
+  background-color: #202020;
+  color: #f0f0f0;
+}
+
+/* body.dark-mode .navigation-wrapper {
+  background-color: #1a1d25;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+} */
+
+body.dark-mode .nav-scrolled {
+  background: #303030;
+}
+
+body.dark-mode .nav-link-a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .nav-link-a:hover {
+  color: #2272fc;
+}
+
+body.dark-mode #greeting-text {
+  color: #f0f0f0;
+}
+
+body.dark-mode .landing-p {
+  color: #f0f0f0;
+}
+
+body.dark-mode .section-header,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .about-me-wrapper{
+  background-color: #303030;
+}
+
+body.dark-mode .project {
+  background-color: #303030;
+}
+
+body.dark-mode p {
+  color: #ffffff!important;
+}
+
+body.dark-mode .project-title {
+  color: #f0f0f0;
+}
+
+body.dark-mode .project-stack li {
+  background-color: #515151;
+  color: #f0f0f0;
+}
+
+body.dark-mode .fa-code {
+  color: #f0f0f0;
+}
+
+
+body.dark-mode .icon-left {
+  color: #ffd700;
+  text-shadow: 0 0 6px #ffd700;
+}
+
+
+body.dark-mode .timeline-logo {
+  filter: invert(1) grayscale(1) opacity(0.8);
+}
+
+body.dark-mode .timeline-logo:hover {
+  filter: invert(1) grayscale(0) opacity(0.8);
+  transform: scale(1.05);
+}
+
+body.dark-mode .timeline-date,
+body.dark-mode .timeline-item p,
+body.dark-mode .project-description,
+body.dark-mode .about-me-text-panel p {
+  color: #a8a8a8!important;
+}
+
+body.dark-mode .timeline-horizontal::before {
+   background: #303030;
+}
+
+body.dark-mode .footer-col h3 {
+  color: #aaa;
+}
+
+body.dark-mode .button-style {
+  background: linear-gradient(
+    140deg,
+    hsla(280, 84%, 41%, 1) 0%,
+    hsla(218, 97%, 56%, 1) 100%
+  );
+  color: white;
+}
+
+body.dark-mode .contact-form-section {
+  background-color: #303030;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #303030;
+  border-bottom: 1px solid #3d3d3d!important;
+}
+
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #999;
+}
+

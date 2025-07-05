@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Sailec-Regular";
+  src: url("../webFonts/SailecRegular/font.woff2") format("woff2"),
+       url("../webFonts/SailecRegular/font.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sailec-Bold";
+  src: url("../webFonts/SailecBold/font.woff2") format("woff2"),
+       url("../webFonts/SailecBold/font.woff") format("woff");
+  font-style: normal;
+}
+
+.freigeistbold { font-family: FreigeistBold; }
+.saileclight { font-family: SailecLight, sans-serif; }
+.sailecbold { font-family: "Sailec-Bold", sans-serif; }
+.sailecregular { font-family: "Sailec-Regular", sans-serif; }
+.sailecmedium { font-family: "Sailec-Medium", sans-serif; }
+
+.letter-spacing-wide { letter-spacing: 0.5px !important; }

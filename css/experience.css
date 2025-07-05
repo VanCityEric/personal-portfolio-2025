@@ -1,0 +1,113 @@
+.experience-wrapper {
+  padding: 70px 0px 80px 0px;
+  overflow-y: hidden;
+}
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.timeline-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 122px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e0e0e0;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 3s ease-out;
+}
+
+
+.timeline-horizontal.animate-line::before {
+  transform: scaleX(1);
+}
+
+.timeline-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #6c63ff;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #888!important;
+  margin-bottom: 0.5rem!important;
+}
+
+.timeline-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.timeline-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .timeline-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-horizontal::before {
+    display: none;
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    background: #e0e0e0;
+    z-index: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.experience-header {
+  text-align: center;
+  margin-top: 4rem;
+  font-family: "Sailec-Bold", sans-serif;
+}
