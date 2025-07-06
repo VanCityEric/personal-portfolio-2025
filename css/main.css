@@ -19,6 +19,15 @@ html, body {
   overflow-x: hidden;
 }
 
+:root {
+  --site-max-width: 1200px;
+}
+
+.container {
+  max-width: var(--site-max-width);
+}
+
+
 .fa-white {
   color: white!important;
 }

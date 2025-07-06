@@ -1,4 +1,5 @@
-.about-me-wrapper {
+
+.about-me-container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -74,28 +75,4 @@
   margin-right: -5px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .about-me-split {
-    flex-direction: column;
-  }
 
-  .about-me-photo-panel {
-    max-width: 100%;
-    height: 250px;
-  }
-
-  .about-me-full-photo {
-    object-fit: cover;
-    height: 100%;
-  }
-
-  .about-me-text-panel {
-    padding: 40px 20px;
-  }
-
-  .about-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}

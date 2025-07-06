@@ -182,3 +182,17 @@ const logoObserver = new MutationObserver(() => {
 });
 
 logoObserver.observe(document.body, { childList: true, subtree: true });
+
+const navObserver = new MutationObserver(() => {
+  const hamburger = document.getElementById("hamburger-menu");
+  const navWrapper = document.querySelector(".navigation-wrapper");
+
+  if (hamburger && navWrapper) {
+    hamburger.addEventListener("click", () => {
+      navWrapper.classList.toggle("nav-open");
+    });
+    navObserver.disconnect(); // Stop observing once initialized
+  }
+});
+
+navObserver.observe(document.body, { childList: true, subtree: true });
