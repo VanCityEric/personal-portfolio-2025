@@ -170,3 +170,15 @@ const toggleObserver = new MutationObserver(() => {
 });
 
 toggleObserver.observe(document.body, { childList: true, subtree: true });
+
+const logoObserver = new MutationObserver(() => {
+  const logo = document.getElementById("logo-scroll");
+  if (logo) {
+    logo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    logoObserver.disconnect();
+  }
+});
+
+logoObserver.observe(document.body, { childList: true, subtree: true });

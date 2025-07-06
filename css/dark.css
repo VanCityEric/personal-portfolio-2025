@@ -56,6 +56,11 @@ body.dark-mode .project-stack li {
   color: #f0f0f0;
 }
 
+body.dark-mode .project-link i:hover {
+  color: #6c63ff;
+  transform: scale(1.25) rotate(-10deg);
+}
+
 body.dark-mode .fa-code {
   color: #f0f0f0;
 }
@@ -116,3 +121,15 @@ body.dark-mode .contact-form textarea::placeholder {
   color: #999;
 }
 
+body.dark-mode .social-icons {
+  color: #f0f0f0;
+}
+
+body.dark-mode .back-to-top i {
+  color: #999
+}
+
+body.dark-mode .back-to-top:hover i {
+  transform: translateY(-2px);
+  color: #6c63ff;
+}
