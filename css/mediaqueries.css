@@ -11,12 +11,14 @@
     font-size: 1.3em;
     width: 80%;
   }
-
 }
 
 @media (max-width: 990px) {
   .nav-links {
     display: none;
+  }
+  .nav-overlay {
+    display: flex;
   }
 
   .hamburger {
@@ -25,6 +27,23 @@
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
-
   }
+
+  .switch-mobile {
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 991px) {
+  .nav-links {
+    display: flex;
+  }
+  .nav-overlay {
+    display: none !important;
+  }
+
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const waitForFadeUps = () => {
     const fadeUps = document.querySelectorAll(".fade-up, .zoom-in");
     if (fadeUps.length === 0) {
-      setTimeout(waitForFadeUps, 100); // Wait for includes to load
+      setTimeout(waitForFadeUps, 100);
       return;
     }
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           timeline.classList.add("animate-line");
-          observer.disconnect(); // run once
+          observer.disconnect();
         }
       });
     },
@@ -56,7 +56,6 @@ window.addEventListener("scroll", () => {
   }
   lastScrollY = window.scrollY;
 
-  // apply shadow + white background if not at top
   if (window.scrollY > 0) {
     nav.classList.add("nav-scrolled");
   } else {
@@ -110,7 +109,6 @@ function startTypingGreeting() {
   type();
 }
 
-// Rename one observer to avoid conflict
 const greetingObserver = new MutationObserver(() => {
   const el = document.getElementById("greeting-text");
   if (el) {
@@ -122,15 +120,18 @@ const greetingObserver = new MutationObserver(() => {
 greetingObserver.observe(document.body, { childList: true, subtree: true });
 
 const toggleObserver = new MutationObserver(() => {
-  const toggle = document.getElementById("theme-toggle");
+  const toggleDesktop = document.getElementById("theme-toggle-desktop");
+  const toggleMobile = document.getElementById("theme-toggle-mobile");
   const logoblack = document.getElementById("logoblack");
   const logowhite = document.getElementById("logowhite");
 
-  if (toggle) {
+  const allToggles = [toggleDesktop, toggleMobile].filter(Boolean);
+
+  if (allToggles.length) {
     const enableDarkMode = () => {
       document.body.classList.add("dark-mode");
-      toggle.checked = true;
       localStorage.setItem("theme", "dark");
+      allToggles.forEach((t) => (t.checked = true));
       if (logoblack && logowhite) {
         logoblack.classList.add("hide");
         logowhite.classList.remove("hide");
@@ -140,8 +141,8 @@ const toggleObserver = new MutationObserver(() => {
 
     const disableDarkMode = () => {
       document.body.classList.remove("dark-mode");
-      toggle.checked = false;
       localStorage.setItem("theme", "light");
+      allToggles.forEach((t) => (t.checked = false));
       if (logoblack && logowhite) {
         logoblack.classList.remove("hide");
         logowhite.classList.add("hide");
@@ -149,20 +150,14 @@ const toggleObserver = new MutationObserver(() => {
       console.log("Dark mode disabled");
     };
 
-    // Apply saved preference on load
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
+    if (savedTheme === "dark") enableDarkMode();
+    else disableDarkMode();
 
-    toggle.addEventListener("change", () => {
-      if (toggle.checked) {
-        enableDarkMode();
-      } else {
-        disableDarkMode();
-      }
+    allToggles.forEach((toggle) => {
+      toggle.addEventListener("change", () => {
+        toggle.checked ? enableDarkMode() : disableDarkMode();
+      });
     });
 
     toggleObserver.disconnect();
@@ -183,16 +178,49 @@ const logoObserver = new MutationObserver(() => {
 
 logoObserver.observe(document.body, { childList: true, subtree: true });
 
-const navObserver = new MutationObserver(() => {
+new MutationObserver((_, obs) => {
   const hamburger = document.getElementById("hamburger-menu");
+  const navOverlay = document.getElementById("nav-overlay");
+  const navWrapper = document.querySelector(".navigation-wrapper");
+  const links = document.querySelectorAll(".nav-overlay .nav-link-a");
+
+  if (!hamburger || !navOverlay || !navWrapper || !links.length) return;
+
+  const closeMenu = () => {
+    navOverlay.classList.remove("open");
+    navWrapper.classList.remove("nav-open");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = navOverlay.classList.toggle("open");
+    navWrapper.classList.toggle("nav-open", isOpen);
+  };
+
+  hamburger.removeEventListener("click", toggleMenu);
+  hamburger.addEventListener("click", toggleMenu);
+
+  links.forEach(link => {
+    link.removeEventListener("click", closeMenu);
+    link.addEventListener("click", closeMenu);
+  });
+
+  obs.disconnect();
+}).observe(document.body, { childList: true, subtree: true });
+
+new MutationObserver(() => {
+  const navOverlay = document.getElementById("nav-overlay");
   const navWrapper = document.querySelector(".navigation-wrapper");
 
-  if (hamburger && navWrapper) {
-    hamburger.addEventListener("click", () => {
-      navWrapper.classList.toggle("nav-open");
-    });
-    navObserver.disconnect(); // Stop observing once initialized
-  }
-});
+  if (!navOverlay || !navWrapper) return;
 
-navObserver.observe(document.body, { childList: true, subtree: true });
+  const closeMenuOnScroll = () => {
+    if (navOverlay.classList.contains("open")) {
+      navOverlay.classList.remove("open");
+      navWrapper.classList.remove("nav-open");
+    }
+  };
+
+  window.addEventListener("scroll", closeMenuOnScroll, { passive: true });
+
+  this.disconnect();
+}).observe(document.body, { childList: true, subtree: true });

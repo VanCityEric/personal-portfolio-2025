@@ -3,10 +3,13 @@ body.dark-mode {
   color: #f0f0f0;
 }
 
-/* body.dark-mode .navigation-wrapper {
-  background-color: #1a1d25;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-} */
+body.dark-mode .bar {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .nav-overlay {
+  background: #303030;
+}
 
 body.dark-mode .nav-scrolled {
   background: #303030;
@@ -35,7 +38,7 @@ body.dark-mode h4 {
   color: #f0f0f0;
 }
 
-body.dark-mode .about-me-container{
+body.dark-mode .about-me-container {
   background-color: #303030;
 }
 
@@ -44,7 +47,7 @@ body.dark-mode .project {
 }
 
 body.dark-mode p {
-  color: #ffffff!important;
+  color: #ffffff !important;
 }
 
 body.dark-mode .project-title {
@@ -65,12 +68,10 @@ body.dark-mode .fa-code {
   color: #f0f0f0;
 }
 
-
 body.dark-mode .icon-left {
   color: #ffd700;
   text-shadow: 0 0 6px #ffd700;
 }
-
 
 body.dark-mode .timeline-logo {
   filter: invert(1) grayscale(1) opacity(0.8);
@@ -85,11 +86,11 @@ body.dark-mode .timeline-date,
 body.dark-mode .timeline-item p,
 body.dark-mode .project-description,
 body.dark-mode .about-me-text-panel p {
-  color: #a8a8a8!important;
+  color: #a8a8a8 !important;
 }
 
 body.dark-mode .timeline-horizontal::before {
-   background: #303030;
+  background: #303030;
 }
 
 body.dark-mode .footer-col h3 {
@@ -112,9 +113,8 @@ body.dark-mode .contact-form-section {
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
   background-color: #303030;
-  border-bottom: 1px solid #3d3d3d!important;
+  border-bottom: 1px solid #3d3d3d !important;
 }
-
 
 body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
@@ -126,7 +126,7 @@ body.dark-mode .social-icons {
 }
 
 body.dark-mode .back-to-top i {
-  color: #999
+  color: #999;
 }
 
 body.dark-mode .back-to-top:hover i {

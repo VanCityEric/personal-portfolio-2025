@@ -12,10 +12,10 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 0px; 
+  padding: 16px 0px;
   position: relative;
   margin-top: 5px;
 }
@@ -32,16 +32,15 @@
 .logo-container {
   flex: 1;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-
 .logo-name img {
-  height: 32px;          
+  height: 32px;
   object-fit: contain;
-  margin-top: 5px;  
+  margin-top: 5px;
   width: 150px;
-}  
+}
 
 .logo-name:hover {
   cursor: pointer;
@@ -65,12 +64,13 @@
 }
 
 .bar {
-  height: 3px;
-  background-color: #111;
+  height: 5px;
+  background-color: #212121;
   border-radius: 3px;
   margin: 5px 0;
   transition: 0.4s ease;
   display: block;
+  margin-top: 4px;
 }
 
 .bar.top {
@@ -81,22 +81,14 @@
   width: 60%;
 }
 
-.bar.bottom {
-  width: 80%;
-}
-
-.nav-open .hamburger .top {
+.nav-open .top {
   transform: translateY(8px) rotate(45deg);
-  width: 100%; /* Full width for X shape */
+  width: 100%;
 }
 
-.nav-open .hamburger .middle {
-  opacity: 0;
-}
-
-.nav-open .hamburger .bottom {
-  transform: translateY(-8px) rotate(-45deg);
-  width: 100%; /* Full width for X shape */
+.nav-open .middle {
+  transform: translateY(-2px) rotate(-45deg);
+  width: 100%;
 }
 
 .nav-links li {
@@ -116,6 +108,34 @@
 
 .nav-link-a:hover {
   color: #6c63ff !important;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 280px;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-overlay.open {
+  right: 0;
+}
+
+.nav-overlay .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  align-items: center;
 }
 
 .fa-times {
@@ -170,21 +190,25 @@
   color: white !important;
 }
 
-
 .contact-button {
   margin-right: -10px;
   padding: 8px 30px; /* slightly less vertical padding */
   align-self: center; /* force vertical centering in flex */
 }
 
-.switch {
-  position: relative;
-  display: inline-flex;
+.switch,
+.switch-mobile {
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  padding: 0 0px;
   height: 24px;
-  margin-right: -15px;
+  padding: 0 6px;
+  position: relative;
+}
+
+.switch-mobile {
+  display: none;
 }
 
 .switch:hover {
@@ -203,7 +227,8 @@
   height: 0;
 }
 
-.slider {
+.slider,
+.slider-mobile {
   position: relative;
   width: 40px;
   height: 20px;
@@ -211,10 +236,11 @@
   border-radius: 34px;
   transition: background-color 0.3s ease;
   display: inline-block;
+  vertical-align: middle;
 }
 
-/* Slider knob */
-.slider::before {
+.slider::before,
+.slider-mobile::before {
   content: "";
   position: absolute;
   height: 16px;
@@ -226,26 +252,33 @@
   transition: transform 0.3s ease;
 }
 
-/* Checked state */
-input:checked + .slider {
-  background-color: #666;
-}
-
-input:checked + .slider::before {
+input:checked + .slider::before,
+input:checked + .slider-mobile::before {
   transform: translateX(20px);
 }
 
 .switch .icon-left,
-.switch .icon-right {
-  font-size: 0.9rem;
+.switch .icon-right,
+.switch-mobile .icon-left,
+.switch-mobile .icon-right {
+  font-size: 1rem;
   color: #888;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin: 0px 0px 0px 5px;
 }
 
+.icon-left-mobile,
+.icon-right-mobile {
+  display: inline !important;
+  position: relative;
+  top: 2px;
+}
 
-/* Glow when unchecked (light mode) */
 body:not(.dark-mode) .icon-right {
   color: #ffa500;
   text-shadow: 0 0 6px #ffa500;
 }
-

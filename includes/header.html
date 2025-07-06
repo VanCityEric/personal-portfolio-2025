@@ -1,36 +1,98 @@
-<!-- Add moon/sun icon inside a new <li> after the Get In Touch button -->
 <div class="light-background"></div>
 <div class="navigation-wrapper">
   <div class="container navigation">
     <div class="logo-container">
       <img src="" alt="" />
       <div class="logo-name" id="logo-scroll">
-        <img id="logoblack" class="logo logoblack" src="../images/logo.svg" alt="website logo" />
-        <img id="logowhite" class="logo logoblack hide" src="../images/logo-white.svg" alt="website logo" />
+        <img
+          id="logoblack"
+          class="logo logoblack"
+          src="../images/logo.svg"
+          alt="website logo"
+        />
+        <img
+          id="logowhite"
+          class="logo logoblack hide"
+          src="../images/logo-white.svg"
+          alt="website logo"
+        />
       </div>
     </div>
-
     <div class="wide-nav">
       <div class="hamburger" id="hamburger-menu">
         <span class="bar top"></span>
         <span class="bar middle"></span>
-        <span class="bar bottom"></span>
       </div>
+      <div>
+        <label class="switch switch-mobile">
+          <i class="fas fa-moon icon-left icon-left-mobile"></i>
+          <input type="checkbox" id="theme-toggle-mobile" />
+          <span class="slider slider-mobile"></span>
+          <i class="fas fa-sun icon-right icon-right-mobile"></i>
+        </label>
+      </div>
+      <!-- Desktop Nav -->
       <ul class="nav-links sailecbold">
-        <li><a class="nav-link nav-link-a home sailecbold" href="#landing">Home</a></li>
-        <li><a class="nav-link nav-link-a about sailecbold" href="#about">About</a></li>
-        <li><a class="nav-link nav-link-a experience sailecbold" href="#experience">Experience</a></li>
-        <li><a class="nav-link nav-link-a projects sailecbold" href="#projects">Projects</a></li>
-        <li><a class="nav-link contact-button button-style sailecbold" href="#contact">GET IN TOUCH</a></li>
+        <li>
+          <a class="nav-link nav-link-a sailecbold" href="#landing">Home</a>
+        </li>
+        <li>
+          <a class="nav-link nav-link-a sailecbold" href="#about">About</a>
+        </li>
+        <li>
+          <a class="nav-link nav-link-a sailecbold" href="#experience"
+            >Experience</a
+          >
+        </li>
+        <li>
+          <a class="nav-link nav-link-a sailecbold" href="#projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link contact-button button-style sailecbold"
+            href="#contact"
+            >GET IN TOUCH</a
+          >
+        </li>
         <li>
           <label class="switch">
             <i class="fas fa-moon icon-left"></i>
-            <input type="checkbox" id="theme-toggle">
+            <input type="checkbox" id="theme-toggle-desktop" />
             <span class="slider"></span>
             <i class="fas fa-sun icon-right"></i>
           </label>
         </li>
       </ul>
+      <!-- Mobile Overlay Nav -->
+      <div class="nav-overlay" id="nav-overlay">
+        <ul class="nav-links sailecbold">
+          <li>
+            <a class="nav-link nav-link-a sailecbold" href="#landing">Home</a>
+          </li>
+          <li>
+            <a class="nav-link nav-link-a sailecbold" href="#about">About</a>
+          </li>
+          <li>
+            <a class="nav-link nav-link-a sailecbold" href="#experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a class="nav-link nav-link-a sailecbold" href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link contact-button button-style sailecbold"
+              href="#contact"
+              >GET IN TOUCH</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
