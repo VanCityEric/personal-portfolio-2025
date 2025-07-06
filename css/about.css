@@ -9,6 +9,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   overflow-y: hidden;
   transition: all 0.3s ease, height 0ms;
+  
 }
 
 .about-me-split {
@@ -44,7 +45,7 @@
 
 .about-me-text-panel {
   flex: 1;
-  padding: 50px;
+  padding: 50px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -207,6 +207,10 @@
   position: relative;
 }
 
+.switch-desktop {
+  margin-right: -30px;
+}
+
 .switch-mobile {
   display: none;
 }
