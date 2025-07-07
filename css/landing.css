@@ -46,6 +46,8 @@
 
 .landing-p {
   position: relative;
+  font-size: 1.3em;
+  line-height: 1.6em;
 }
 
 #greeting-text::after {

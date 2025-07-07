@@ -19,9 +19,15 @@ body.dark-mode .nav-link-a {
   color: #f0f0f0;
 }
 
-body.dark-mode .nav-link-a:hover {
-  color: #2272fc;
+body.dark-mode .button-style-secondary {
+  border-color: #b86eff; /* lighter violet for better contrast */
+  color: #f2eaff;         /* brightened text */
 }
+
+body.dark-mode .purple-text-color {
+  color: white!important;
+}
+
 
 body.dark-mode #greeting-text {
   color: #f0f0f0;
@@ -97,14 +103,6 @@ body.dark-mode .footer-col h3 {
   color: #aaa;
 }
 
-body.dark-mode .button-style {
-  background: linear-gradient(
-    140deg,
-    hsla(280, 84%, 41%, 1) 0%,
-    hsla(218, 97%, 56%, 1) 100%
-  );
-  color: white;
-}
 
 body.dark-mode .contact-form-section {
   background-color: #303030;

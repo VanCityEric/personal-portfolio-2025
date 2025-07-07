@@ -11,25 +11,26 @@
 @import url("dark.css");
 
 * {
-    font-family: "Sailec-Regular", sans-serif;
+  font-family: "Sailec-Regular", sans-serif;
 }
 
-html, body {
-  max-width: 100%!important;
+html,
+body {
+  max-width: 100% !important;
   overflow-x: hidden;
 }
 
 :root {
-  --site-max-width: 1200px;
+  --site-max-width: 1080px;
+  --purple-color: hsla(280, 84%, 41%, 1);
 }
 
 .container {
   max-width: var(--site-max-width);
 }
 
-
 .fa-white {
-  color: white!important;
+  color: white !important;
 }
 
 .button-style,
@@ -40,31 +41,31 @@ html, body {
   box-shadow: none;
 }
 
-.button-style {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none !important;
+.button-style,
+.button-style-secondary {
+  padding: 10px 24px; /* same exact padding */
+  border-radius: 6px;
   font-size: 0.9em;
-  background: linear-gradient(140deg, hsla(280, 84%, 41%, 1), hsla(218, 97%, 56%, 1));
-  color: white;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px; 
+  box-sizing: border-box;
+}
+
+.button-style {
   background: linear-gradient(
     140deg,
     hsla(280, 84%, 41%, 1) 0%,
     hsla(218, 97%, 56%, 1) 100%
   );
+  color: white;
   background-size: 200%;
   background-position: left;
-  color: white;
-  font-size: 0.9em;
-  border-radius: 5px;
-  padding: 10px 20px;
-  border: none;
-  transition: 
-    transform 0.3s ease,
-    background-position 0.5s ease,
+  border: none !important;
+  transition: transform 0.3s ease, background-position 0.5s ease,
     box-shadow 0.3s ease;
 }
 
@@ -73,3 +74,30 @@ html, body {
   background-position: right;
   cursor: pointer;
 }
+
+.button-style-secondary {
+  background: transparent;
+  color: hsla(280, 84%, 41%, 1);
+  border: 2px solid hsla(280, 84%, 41%, 1)!important;
+  background-size: 200%;
+  background-position: left;
+  transition: transform 0.3s ease, background-position 0.5s ease,
+    background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-style-secondary:hover {
+  transform: translateY(-4px);
+  background: hsla(280, 84%, 41%, 1);
+  color: white;
+  box-shadow: 0 4px 12px rgba(135, 17, 193, 0.3);
+  cursor: pointer;
+}
+
+.button-style-secondary:hover .purple-text-color {
+  color: white;
+}
+
+.purple-text-color {
+  color: hsla(280, 84%, 41%, 1);
+}
+

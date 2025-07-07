@@ -59,7 +59,7 @@ textarea {
 .contact-text-section .fa-github:hover, 
 .contact-text-section .fa-linkedin-in:hover {
   transform: scale(1.25) translateY(-3px);
-  color: #6c63ff;
+  color: var(--purple-color);
   text-shadow: 0 0 8px rgba(34, 114, 252, 0.5);
   cursor: pointer;
 }

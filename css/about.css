@@ -45,7 +45,7 @@
 
 .about-me-text-panel {
   flex: 1;
-  padding: 50px 70px;
+  padding: 100px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;

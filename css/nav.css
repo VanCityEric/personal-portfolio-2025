@@ -67,7 +67,7 @@
 }
 
 .hamburger:hover .bar {
-  background-color: #6c63ff;
+  background-color: var(--purple-color);
 }
 
 .bar {
@@ -114,7 +114,7 @@
 }
 
 .nav-link-a:hover {
-  color: #6c63ff !important;
+  color: var(--purple-color)!important;
 }
 
 .nav-overlay {
