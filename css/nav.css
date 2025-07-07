@@ -26,7 +26,7 @@
 
 .nav-scrolled {
   background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
@@ -38,7 +38,6 @@
 .logo-name img {
   height: 32px;
   object-fit: contain;
-  margin-top: 5px;
   width: 150px;
 }
 
@@ -61,16 +60,24 @@
   display: none;
   cursor: pointer;
   z-index: 999;
+  margin-top: 1px;
+  padding: 10px;
+ 
+  
+}
+
+.hamburger:hover .bar {
+  background-color: #6c63ff;
 }
 
 .bar {
-  height: 5px;
+  height: 4px;
   background-color: #212121;
   border-radius: 3px;
-  margin: 5px 0;
+  margin: 7px 0;
   transition: 0.4s ease;
   display: block;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .bar.top {
@@ -82,7 +89,7 @@
 }
 
 .nav-open .top {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
   width: 100%;
 }
 
@@ -117,7 +124,7 @@
   height: 100vh;
   width: 280px;
   background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 0 30px rgba(0, 0, 0, 0.2);
   transition: right 0.4s ease;
   z-index: 998;
   display: flex;
