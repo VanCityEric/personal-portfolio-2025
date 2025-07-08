@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Eric's Portfolio</title>
 
-    <!-- Fonts & Styles -->
-    <script src="https://kit.fontawesome.com/4dd61c9fa6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4dd61c9fa6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/mediaqueries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div id="header"></div>
@@ -22,49 +27,48 @@
     <div id="contact"></div>
     <div id="footer"></div>
 
-    <!-- Section Includes -->
     <script>
       const sections = [
-  'header',
-  'landing',
-  'about',
-  'experience',
-  'projects',
-  'contact',
-  'footer',
-];
+        "header",
+        "landing",
+        "about",
+        "experience",
+        "projects",
+        "contact",
+        "footer",
+      ];
 
-Promise.all(
-  sections.map((id) =>
-    fetch(`includes/${id}.html`)
-      .then((res) => res.text())
-      .then((html) => {
-        document.getElementById(id).innerHTML = html;
-      })
-  )
-).then(() => {
-  // Run timeline animation only AFTER experience.html is injected
-  const experienceSection = document.querySelector(".experience-wrapper");
-  const timeline = document.querySelector(".timeline-horizontal");
+      Promise.all(
+        sections.map((id) =>
+          fetch(`includes/${id}.html`)
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById(id).innerHTML = html;
+            })
+        )
+      ).then(() => {
+        // Run timeline animation only AFTER experience.html is injected
+        const experienceSection = document.querySelector(".experience-wrapper");
+        const timeline = document.querySelector(".timeline-horizontal");
 
-  if (experienceSection && timeline) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            timeline.classList.add("animate-line");
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+        if (experienceSection && timeline) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  timeline.classList.add("animate-line");
+                  observer.disconnect();
+                }
+              });
+            },
+            { threshold: 0.3 }
+          );
 
-    observer.observe(experienceSection);
-  }
-});
+          observer.observe(experienceSection);
+        }
+      });
     </script>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
