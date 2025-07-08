@@ -21,17 +21,6 @@
 
 .landing-p { margin-top: 20px; font-size: 1.4em; font-weight: 100 !important;   color: #333; }
 
-.landing-image {
-  float: right;
-  width: 40%;
-  height: 390px;
-  position: relative;
-  top: 100px;
-  right: 120px;
-}
-
-.landing-image img { height: 110%; width: 150%; }
-
 .landing-button {
   display: inline-block;
   margin-top: 50px; /* adjust as needed */

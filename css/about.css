@@ -1,4 +1,9 @@
 
+.about-me-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .about-me-container {
   max-width: 1200px;
   width: 100%;
@@ -9,6 +14,7 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   overflow-y: hidden;
   transition: all 0.3s ease, height 0ms;
+  z-index: 1;
   
 }
 
@@ -75,5 +81,17 @@
 .linkedin-button {
   margin-right: -5px;
 }
+
+.landing-image {
+  float: right;
+  width: 40%;
+  height: 420px;
+  position: absolute;
+  top: -460px;
+  right: 130px;
+  z-index: -1;
+}
+
+.landing-image img { height: 120%; width: 160%; }
 
 
