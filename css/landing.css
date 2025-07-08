@@ -23,13 +23,13 @@
 
 .landing-button {
   display: inline-block;
-  margin-top: 50px; /* adjust as needed */
+  margin-top: 50px;
 }
 
 .landing-header {
-  min-height: 1.5em; /* Ensure full height is preserved */
+  min-height: 1.5em; 
   position: relative;
-  font-size: 3.2em; 
+  font-size: 3.0em; 
   font-weight: 500; 
 }
 

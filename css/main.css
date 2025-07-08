@@ -37,7 +37,7 @@ body {
 .menu-button,
 .contact-button {
   transition: all 0.3s ease;
-  transform: translateY(0);
+  /* Removed transform: translateY(0); from here to avoid conflict */
   box-shadow: none;
 }
 
@@ -51,7 +51,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px; 
+  height: 44px;
   box-sizing: border-box;
 }
 
@@ -67,6 +67,7 @@ body {
   border: none !important;
   transition: transform 0.3s ease, background-position 0.5s ease,
     box-shadow 0.3s ease;
+  transform: translateY(0); /* Explicitly set base transform here */
 }
 
 .button-style:hover {
@@ -78,7 +79,7 @@ body {
 .button-style-secondary {
   background: transparent;
   color: hsla(280, 84%, 41%, 1);
-  border: 2px solid hsla(280, 84%, 41%, 1)!important;
+  border: 2px solid hsla(280, 84%, 41%, 1) !important;
   background-size: 200%;
   background-position: left;
   transition: transform 0.3s ease, background-position 0.5s ease,
@@ -100,4 +101,3 @@ body {
 .purple-text-color {
   color: hsla(280, 84%, 41%, 1);
 }
-

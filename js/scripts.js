@@ -199,7 +199,7 @@ new MutationObserver((_, obs) => {
   hamburger.removeEventListener("click", toggleMenu);
   hamburger.addEventListener("click", toggleMenu);
 
-  links.forEach(link => {
+  links.forEach((link) => {
     link.removeEventListener("click", closeMenu);
     link.addEventListener("click", closeMenu);
   });
@@ -207,7 +207,8 @@ new MutationObserver((_, obs) => {
   obs.disconnect();
 }).observe(document.body, { childList: true, subtree: true });
 
-new MutationObserver(() => {
+// Corrected MutationObserver for closing menu on scroll
+const scrollObserver = new MutationObserver((mutations, observerInstance) => {
   const navOverlay = document.getElementById("nav-overlay");
   const navWrapper = document.querySelector(".navigation-wrapper");
 
@@ -222,5 +223,7 @@ new MutationObserver(() => {
 
   window.addEventListener("scroll", closeMenuOnScroll, { passive: true });
 
-  this.disconnect();
-}).observe(document.body, { childList: true, subtree: true });
+  observerInstance.disconnect();
+});
+
+scrollObserver.observe(document.body, { childList: true, subtree: true });

@@ -20,8 +20,8 @@ body.dark-mode .nav-link-a {
 }
 
 body.dark-mode .button-style-secondary {
-  border-color: #b86eff; /* lighter violet for better contrast */
-  color: #f2eaff;         /* brightened text */
+  border-color: #b86eff; 
+  color: #f2eaff;        
 }
 
 body.dark-mode .purple-text-color {
@@ -129,5 +129,5 @@ body.dark-mode .back-to-top i {
 
 body.dark-mode .back-to-top:hover i {
   transform: translateY(-2px);
-  color: #6c63ff;
+  color: var(--purple-color);
 }
