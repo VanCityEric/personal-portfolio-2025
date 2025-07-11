@@ -58,12 +58,18 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
   const nav = document.querySelector(".navigation-wrapper");
 
-  // show/hide on scroll direction
-  if (window.scrollY > lastScrollY) {
-    nav.classList.add("nav-hide");
-  } else {
+  const atTopThreshold = 5; 
+
+  if (window.scrollY <= atTopThreshold) {
     nav.classList.remove("nav-hide");
+  } else {
+    if (window.scrollY > lastScrollY) {
+      nav.classList.add("nav-hide");
+    } else {
+      nav.classList.remove("nav-hide");
+    }
   }
+
   lastScrollY = window.scrollY;
 
   if (window.scrollY > 0) {
