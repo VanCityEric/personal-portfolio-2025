@@ -1,35 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const waitForFadeUps = () => {
-    const aboutSection = document.querySelector(".about-me-wrapper");
+const waitForFadeUps = () => {
+  const aboutSection = document.querySelector(".about-me-wrapper");
 
-    if (aboutSection) {
+  if (aboutSection) {
     setTimeout(() => {
       aboutSection.classList.add("in-view");
-    }, 100); // 100ms delay for a smoother start, adjust as needed
+    }, 100);
   }
 
+  const fadeUps = document.querySelectorAll(".fade-up, .zoom-in");
+  const scrollTriggeredElements = Array.from(fadeUps).filter(
+    (el) => el.id !== "about"
+  );
 
-    const fadeUps = document.querySelectorAll(".fade-up, .zoom-in");
-    if (fadeUps.length === 0) {
-      setTimeout(waitForFadeUps, 100);
-      return;
-    }
+  if (scrollTriggeredElements.length === 0) {
+    console.warn("No scroll-triggered elements found immediately after load.");
+    return;
+  }
 
-
-    const onScroll = () => {
-      fadeUps.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const trigger = window.innerHeight * 0.85;
-        if (rect.top < trigger) el.classList.add("in-view");
-      });
-    };
-
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // run on page load too
+  const onScroll = () => {
+    scrollTriggeredElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const trigger = window.innerHeight * 0.85;
+      if (rect.top < trigger) el.classList.add("in-view");
+    });
   };
 
-  waitForFadeUps();
-});
+  window.removeEventListener("scroll", onScroll); 
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const experienceSection = document.querySelector(".experience-wrapper");
@@ -58,7 +57,7 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
   const nav = document.querySelector(".navigation-wrapper");
 
-  const atTopThreshold = 5; 
+  const atTopThreshold = 5;
 
   if (window.scrollY <= atTopThreshold) {
     nav.classList.remove("nav-hide");

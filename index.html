@@ -74,6 +74,13 @@
             })
         )
       ).then(() => {
+        if (typeof waitForFadeUps === "function") {
+          waitForFadeUps();
+        } else {
+          console.error(
+            "waitForFadeUps function not found. Is scripts.js loaded correctly?"
+          );
+        }
         // Run timeline animation only AFTER experience.html is injected
         const experienceSection = document.querySelector(".experience-wrapper");
         const timeline = document.querySelector(".timeline-horizontal");
