@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   const waitForFadeUps = () => {
+    const aboutSection = document.querySelector(".about-me-wrapper");
+
+    if (aboutSection) {
+    setTimeout(() => {
+      aboutSection.classList.add("in-view");
+    }, 100); // 100ms delay for a smoother start, adjust as needed
+  }
+
+
     const fadeUps = document.querySelectorAll(".fade-up, .zoom-in");
     if (fadeUps.length === 0) {
       setTimeout(waitForFadeUps, 100);
       return;
     }
+
 
     const onScroll = () => {
       fadeUps.forEach((el) => {
